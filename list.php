@@ -7,7 +7,7 @@ require "Connect.php";
 $con = new Connect();
 
 $activeUsers = $con->getActiveUsers(); // 1 = logged in 
-    $i = 1;
+    
     foreach($activeUsers as $user){ 
         
         if($user['userName'] !== $_SESSION['userName']){
@@ -17,7 +17,7 @@ $activeUsers = $con->getActiveUsers(); // 1 = logged in
                 <?php echo "<button class='button_list' name='btn".$i."' id='btn".$user['idUser']."' value='".$user['idUser']."'>"
                     ."<span style='color:#5be44e;'>".$user['userName']."</span>
                 </button>";
-                $i++;
+                
                 ?>
             </div>
         </div>

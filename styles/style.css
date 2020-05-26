@@ -1,0 +1,163 @@
+* {
+  display: border-box;
+}
+
+body {
+  font: 0.8em Arial;
+  background: #2C2F33;
+  font-size: 15px;
+}
+
+.container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 80% 1fr;
+      grid-template-columns: 80% 1fr;
+      grid-template-areas: "chat lista";
+  grid-gap: 3rem;
+}
+
+.chat .messages {
+  border: 1px solid #ccc;
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.messages::-webkit-scrollbar-track {
+  background-color: #a9aeb5;
+}
+
+.messages::-webkit-scrollbar {
+  width: 15px;
+}
+
+.messages::-webkit-scrollbar-thumb {
+  background-color: #5b616a;
+}
+
+.chat .messages .message {
+  margin: 10px;
+  max-width: 40%;
+  border-radius: 10px;
+  word-wrap: break-word;
+  color: #90EE90;
+}
+
+.chat {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: chat;
+  height: 80vh;
+}
+
+textarea {
+  resize: none;
+}
+
+.users_list {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: lista;
+  width: 100%;
+}
+
+.chat .entry {
+  width: 100%;
+  height: 40px;
+  padding-left: 0;
+  padding-right: 0;
+  margin-top: 5px;
+  font: 1em Arial;
+  height: 12vh;
+  background: #44484e;
+  color: white;
+}
+
+.chat .entry::-webkit-input-placeholder {
+  color: #fff;
+  padding: 0 10px;
+}
+
+.chat .entry:-ms-input-placeholder {
+  color: #fff;
+  padding: 0 10px;
+}
+
+.chat .entry::-ms-input-placeholder {
+  color: #fff;
+  padding: 0 10px;
+}
+
+.chat .entry::placeholder {
+  color: #fff;
+  padding: 0 10px;
+}
+
+.chat .message a {
+  color: slategrey;
+}
+
+.chat .right {
+  margin-left: auto;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  background: #4f555c;
+  padding: 0 30px;
+}
+
+.chat .right .usernameUnderMessage {
+  text-align: right;
+}
+
+.chat .left .usernameUnderMessage {
+  text-align: left;
+}
+
+.chat .left {
+  margin-right: auto;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  background: #676e77;
+  padding: 0 30px;
+}
+
+.active {
+  height: 10px;
+  width: 10px;
+  background-color: #5be44e;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.non-active {
+  height: 10px;
+  width: 10px;
+  background-color: red;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.username {
+  display: inline-block;
+}
+
+.user {
+  padding: 5px 10px;
+}
+
+.user .username .button_list {
+  background-color: transparent;
+  border: none;
+  color: white;
+}
+/*# sourceMappingURL=style.css.map */
